@@ -33,6 +33,21 @@
       letter-spacing: 2px;
     }
 
+    .discord-bar {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .discord-bar a {
+      color: #ffcc00;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     nav {
       background: #333;
       padding: 0.5rem;
@@ -64,6 +79,10 @@
 
     article {
       margin-bottom: 3rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      background: #fefefe;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
     }
 
     article h2 {
@@ -93,6 +112,15 @@
       padding: 1rem;
       margin-top: 3rem;
     }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -101,16 +129,22 @@
     <p>Official Site</p>
   </header>
 
+  <!-- Discord Links -->
+  <div class="discord-bar">
+    <a href="https://discord.gg/bx2mxMZsXc" target="_blank">Akron Blackblades' Discord</a> | 
+    <a href="https://discord.gg/FAbRvBjGnW" target="_blank">Midwest Premodern Discord</a>
+  </div>
+
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#events">Events</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="container">
     <main>
-      <article id="home">
+      <article>
         <h2>Welcome</h2>
         <p>
           Welcome to the official website of the Akron Blackblades. Here you’ll find
@@ -119,36 +153,14 @@
         </p>
       </article>
 
-      <article id="about">
-        <h2>About Us</h2>
+      <article>
+        <h2>Next Event</h2>
         <p>
-          The Akron Blackblades are a Magic: The Gathering playgroup dedicated to fun,
-          competition, and community. We gather regularly to play in a casual but
-          competitive environment, embracing the spirit of Premodern and the
-          creativity of deckbuilding.
+          Our first recurring event is at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> every other Thursday starting 8/28/2025 at 6:30pm.
+          Gold Border and Proxy friendly, $10 entry fee, paid back in store credit to top earners.
         </p>
-      </article>
-
-      <article id="events">
-        <h2>Upcoming Events</h2>
         <p>
-          Come sling spells with the Akron Blackblades at Full Grip Games every other
-          Thursday at 6:30pm in sunny and pastoral Akron, Ohio. Gold Border and Proxy
-          friendly, $10 entry fee, paid back in store credit to top earners.
-        </p>
-        <h3>Event Calendar</h3>
-        <!-- Replace the src link below with your Google Calendar embed link -->
-        <iframe 
-          src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York" 
-          style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
-        </iframe>
-      </article>
-
-      <article id="contact">
-        <h2>Contact</h2>
-        <p>
-          Want to join or learn more? Reach out to us at:
-          <a href="mailto:webmaster@akronblackblades.org">webmaster@akronblackblades.org>/a>
+          Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a> for updates!
         </p>
       </article>
     </main>
@@ -156,15 +168,19 @@
     <aside>
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#events">Events Calendar</a></li>
-        <li><a href="#about">About the Blackblades</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="events.html">Event Calendar</a></li>
+        <li><a href="about.html">About the Blackblades</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="https://premodernmagic.com" target="_blank">Premodern Rules</a></li>
       </ul>
     </aside>
   </div>
 
   <footer>
-    <p>&copy; 2025 Akron Blackblades. All rights reserved.</p>
+    <p>
+      Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades. All rights reserved.
+    </p>
   </footer>
 </body>
 </html>
+
