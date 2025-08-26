@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akron Blackblades</title>
+
+  <!-- Retro fantasy-inspired font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: Georgia, serif;
@@ -23,8 +27,10 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 3rem;
+      text-shadow: 2px 2px #444;
+      letter-spacing: 2px;
     }
 
     nav {
@@ -96,36 +102,64 @@
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Events</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
     <main>
-      <article>
-        <h2>Welcome to the Akron Blackblades</h2>
+      <article id="home">
+        <h2>Welcome</h2>
         <p>
-          This is the official website of the Akron Blackblades. Stay tuned for
-          news, updates, and events.
+          Welcome to the official website of the Akron Blackblades. Here you’ll find
+          news, updates, and event information for our community of Magic: The Gathering
+          players in Akron, Ohio.
         </p>
       </article>
 
-      <article>
-        <h2>Recent News</h2>
+      <article id="about">
+        <h2>About Us</h2>
         <p>
-          Come sling spells with the Akron Blackblades at Full Grip Games this 
-          Thursday at 6:30pm in sunny and pastoral Akron, Ohio. Gold Border and Proxy friendly, $10 entry fee, paid back in store credit to top earners.
+          The Akron Blackblades are a Magic: The Gathering playgroup dedicated to fun,
+          competition, and community. We gather regularly to play in a casual but
+          competitive environment, embracing the spirit of classic formats and the
+          creativity of deckbuilding.
+        </p>
+      </article>
+
+      <article id="events">
+        <h2>Upcoming Events</h2>
+        <p>
+          Come sling spells with the Akron Blackblades at Full Grip Games every other
+          Thursday at 6:30pm in sunny and pastoral Akron, Ohio. Gold Border and Proxy
+          friendly, $10 entry fee, paid back in store credit to top earners.
+        </p>
+        <h3>Event Calendar</h3>
+        <!-- Replace the src link below with your Google Calendar embed link -->
+        <iframe 
+          src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York" 
+          style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+        </iframe>
+      </article>
+
+      <article id="contact">
+        <h2>Contact</h2>
+        <p>
+          Want to join or learn more? Reach out to us at:
+          <a href="mailto:webmaster@akronblackblades.org">webmaster@akronblackblades.org>/a>
         </p>
       </article>
     </main>
 
     <aside>
-      <h3>Sidebar</h3>
-      <p>
-        Quick links, archives, and other resources will go here.
-      </p>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#events">Events Calendar</a></li>
+        <li><a href="#about">About the Blackblades</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
     </aside>
   </div>
 
