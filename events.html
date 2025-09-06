@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 
 <style>
+/* General body styles */
 body {
   font-family: Georgia, serif;
   background-color: #e0e0e0;
@@ -23,7 +24,16 @@ body {
   min-height: 100vh;
   margin: 0;
 }
-.container-main { flex: 1 0 auto; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+/* Container main section for flex layout */
+.container-main { 
+  flex: 1 0 auto; 
+  max-width: 900px; 
+  margin: 2rem auto; 
+  padding: 0 1rem; 
+}
+
+/* Header styles */
 header {
   background: linear-gradient(135deg, #0b1c34, #10253f);
   color: #b38f00;
@@ -32,10 +42,20 @@ header {
   border-bottom: 4px solid #111;
   text-shadow: 2px 2px #000;
 }
-header h1 { margin:0; font-family:'Cinzel Decorative', cursive; font-size:3rem; letter-spacing:2px; }
-header p { margin-top:0.3rem; font-size:1.2rem; }
+header h1 { 
+  margin:0; 
+  font-family:'Cinzel Decorative', cursive; 
+  font-size:3rem; 
+  letter-spacing:2px; 
+}
+header p { margin-top:0.3rem; }
 
-nav { background: #0b1c34; padding: 0.5rem; text-align: center; }
+/* Navigation bar styles */
+nav { 
+  background: #0b1c34; 
+  padding: 0.5rem; 
+  text-align: center; 
+}
 nav a {
   color: #b38f00;
   margin: 0 1rem;
@@ -46,21 +66,63 @@ nav a {
   background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
   transition: all 0.3s ease;
 }
-nav a:hover { color:#fff; text-shadow:0 0 6px #b38f00; background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)); }
+nav a:hover { 
+  color:#fff; 
+  text-shadow:0 0 6px #b38f00; 
+  background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)); 
+}
 
-.discord-bar { background: #111; color: #fff; text-align: center; padding: 0.5rem; font-size:0.9rem; }
-.discord-bar a { color:#b38f00; margin:0 1rem; text-decoration:none; font-weight:bold; }
+/* Discord bar */
+.discord-bar { 
+  background: #111; 
+  color: #fff; 
+  text-align: center; 
+  padding: 0.5rem; 
+  font-size:0.9rem; 
+}
+.discord-bar a { 
+  color:#b38f00; 
+  margin:0 1rem; 
+  text-decoration:none; 
+  font-weight:bold; 
+}
 .discord-bar a:hover { text-shadow:0 0 6px #b38f00; }
 
-article { margin-bottom:2rem; padding:1rem; border:2px solid #b38f00; border-radius:8px; background:#ffffff; box-shadow:2px 2px 8px rgba(0,0,0,0.2); }
-article h2 { font-size:1.75rem; color:#0b1c34; text-shadow:1px 1px #aaa; }
+/* Article styles */
+article { 
+  margin-bottom:2rem; 
+  padding:1rem; 
+  border:2px solid #b38f00; 
+  border-radius:8px; 
+  background:#ffffff; 
+  box-shadow:2px 2px 8px rgba(0,0,0,0.2); 
+}
+article h2 { 
+  font-size:1.75rem; 
+  color:#0b1c34; 
+  text-shadow:1px 1px #aaa; 
+}
 article p, article li { font-size:1rem; }
 article a { color:#103366; font-weight:bold; text-decoration:none; }
 article a:hover { text-shadow:0 0 6px #b38f00; }
 
-iframe { border:0; width:100%; height:600px; margin-top:1rem; }
+/* Google Calendar iframe */
+iframe { 
+  border:0; 
+  width:100%; 
+  height:600px; 
+  margin-top:1rem; 
+}
 
-footer { flex-shrink:0; background:#111; color:#b38f00; text-align:center; padding:1rem; margin-top:2rem; }
+/* Sticky footer */
+footer { 
+  flex-shrink:0; 
+  background:#111; 
+  color:#b38f00; 
+  text-align:center; 
+  padding:1rem; 
+  margin-top:2rem; 
+}
 footer a { color:#b38f00; }
 footer a:hover { text-shadow:0 0 6px #b38f00; }
 </style>
@@ -86,7 +148,7 @@ footer a:hover { text-shadow:0 0 6px #b38f00; }
 <div class="container-main">
 <article>
 <h2>Recurring Event</h2>
-<p id="recurring-event">Join us at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> every other Thursday at 6:30 PM in Akron, Ohio. All events are <strong>proxy-friendly</strong> (cards must be legible), <strong>gold-border friendly</strong>, and <strong>reprint-friendly</strong>. $10 entry fee paid back in store credit to top earners. Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a>.</p>
+<p id="recurring-event">Loading next event...</p>
 </article>
 
 <article>
@@ -94,13 +156,13 @@ footer a:hover { text-shadow:0 0 6px #b38f00; }
 <p>Our first major MTG Premodern event at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> will be on October 4th at 1 PM.</p>
 <ul>
 <li>$30 entry; store credit to top performers after Swiss rounds + top-cut playoff.</li>
-<li>Gold-bordered prizes for top players:</li>
+<li>Gold Bordered prizes for top players:</li>
 <ul>
 <li>1st Place: GB Gaea's Cradle</li>
 <li>2nd Place: GB Mud Bundle (3 Grim Monolith, 4 Wasteland)</li>
-<li>3rd/4th Place: Choice of 3 Force of Will or 1 Survival of the Fittest</li>
+<li>3rd/4th Place: GB Choice: 3 Force of Will or 1 Survival of the Fittest</li>
 </ul>
-<li>Events follow the <a href="https://premodernmagic.com/banned-watched#ban-list" target="_blank">official Premodern banlist</a>.</li>
+<li>Events follow the <a href="https://premodernmagic.com/banned-watched#ban-list" target="_blank">official PreModern banlist</a>.</li>
 </ul>
 </article>
 
@@ -114,26 +176,34 @@ footer a:hover { text-shadow:0 0 6px #b38f00; }
 <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- JavaScript for Next Event Date -->
+<!-- DST-aware JavaScript for recurring event -->
 <script>
-// Set the next upcoming Thursday for biweekly events starting 9/11/2025
 (function() {
-  const startDate = new Date(2025, 8, 11, 18, 30); // September is 8 (0-indexed)
+  const startDate = new Date('2025-09-11T18:30:00'); // Initial event
   const now = new Date();
-  const biweeklyMs = 14 * 24 * 60 * 60 * 1000; // 14 days in milliseconds
+  const biweeklyMs = 14 * 24 * 60 * 60 * 1000; // 14 days in ms
   let nextEvent = startDate;
 
-  // Find the next upcoming date
   while(nextEvent < now) {
     nextEvent = new Date(nextEvent.getTime() + biweeklyMs);
   }
 
-  const options = { weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' };
-  document.getElementById('recurring-event').innerHTML = `Join us at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> on <strong>${nextEvent.toLocaleString('en-US', options)}</strong> (every other Thursday) in Akron, Ohio. All events are <strong>proxy-friendly</strong> (cards must be legible), <strong>gold-border friendly</strong>, and <strong>reprint-friendly</strong>. $10 entry fee paid back in store credit to top earners. Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a>.`;
+  const options = { 
+    weekday: 'long', 
+    month: 'numeric', 
+    day: 'numeric', 
+    year: 'numeric', 
+    hour: 'numeric', 
+    minute: '2-digit', 
+    timeZone: 'America/New_York' 
+  };
+
+  document.getElementById('recurring-event').innerHTML = 
+    `Join us at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> on <strong>${nextEvent.toLocaleString('en-US', options)}</strong> (every other Thursday) in Akron, Ohio. All events are <strong>proxy-friendly</strong> (cards must be legible), <strong>gold-border friendly</strong>, and <strong>reprint-friendly</strong>. $10 entry fee paid back in store credit to top earners. Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a>.`;
 })();
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
