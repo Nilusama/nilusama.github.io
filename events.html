@@ -6,33 +6,25 @@
 <title>Events - Akron Blackblades</title>
 <meta name="description" content="Upcoming Akron Blackblades Premodern Magic: The Gathering events and gatherings.">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" href="favicon.png">
-
-<!-- Bootstrap & Google Fonts -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-
-<!-- Shared CSS -->
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="events-page">
 
-<!-- Header -->
 <header>
 <h1>Akron Blackblades</h1>
 <p>Upcoming Events</p>
 </header>
 
-<!-- Discord bar -->
 <div class="discord-bar">
 <a href="https://discord.gg/bx2mxMZsXc" target="_blank">Akron Blackblades Discord</a>
 </div>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-custom">
   <div class="container-fluid justify-content-center">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:#996600;">☰</span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav text-center">
@@ -45,9 +37,7 @@
   </div>
 </nav>
 
-<!-- Main Content -->
-<div class="container-main text-center events-bullets">
-
+<div class="container-main text-center">
   <article>
     <h2>Recurring Event</h2>
     <p>Join us twice a month at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> every other Thursday starting <span id="nextEventDate"></span> at 6:30 PM in Akron, Ohio. All events are <strong>proxy-friendly</strong>, <strong>gold-border friendly</strong>, and <strong>reprint-friendly</strong>. $10 entry fee paid back in store credit to top earners. Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a>.</p>
@@ -74,16 +64,19 @@
   </article>
 </div>
 
-<!-- Footer -->
 <footer>
 <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
 </footer>
 
-<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Calculate next recurring event date
-  const startDate = new Date("2025-09-11T18:30:00"); // local time
+  // Calculate next recurring event
+  const startDate = new Date("2025-09-11T18:30:00");
   const now = new Date();
   let nextEvent = new Date(startDate);
-  while (nextEvent < now) { nextEvent.set
+  while (nextEvent < now) { nextEvent.setDate(nextEvent.getDate() + 14); }
+  const options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: true };
+  document.getElementById("nextEventDate").textContent = nextEvent.toLocaleString('en-US', options) + " (occurs every 2 weeks)";
+</script>
+</body>
+</html>
