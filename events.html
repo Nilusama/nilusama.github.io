@@ -1,144 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akron Blackblades Events</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akron Blackblades Events</title>
 
-<!-- Google Fonts for retro header style -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <!-- Google Fonts for retro headers -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-<!-- Internal CSS for retro parchment background and styled articles -->
-<style>
-body { 
-  font-family: Georgia, serif; 
-  background: url('https://www.publicdomainpictures.net/pictures/300000/velka/parchment-paper-background.jpg') no-repeat center top fixed; 
-  background-size: cover; 
-  color: #222; 
-  margin:0; 
-  padding:0; 
-  line-height:1.6; 
-}
+  <style>
+    /*-----------------------
+      GLOBAL BODY SETTINGS
+    ------------------------*/
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background-color: #0B1A3D; /* Dark navy background */
+      color: #F8F8F2;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Header styling */
-header { 
-  background:#111; 
-  color:#ffcc00; 
-  padding:2rem; 
-  text-align:center; 
-  border-bottom:4px solid #444; 
-  text-shadow:2px 2px #444; 
-}
-header h1 { margin:0; font-family:'Cinzel Decorative', cursive; font-size:2.5rem; letter-spacing:2px; }
-header p { margin-top:0.3rem; }
+    /*-----------------------
+      HEADER STYLES
+    ------------------------*/
+    header {
+      background: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 4px solid #1E3A8A;
+      text-shadow: 1px 1px #111;
+    }
 
-/* Discord bar styling */
-.discord-bar { 
-  background:#222; 
-  color:#fff; 
-  text-align:center; 
-  padding:0.5rem; 
-  font-size:0.9rem; 
-}
-.discord-bar a { color:#ffcc00; margin:0 1rem; text-decoration:none; font-weight:bold; }
-.discord-bar a:hover { text-shadow:0 0 6px #ffcc00; }
+    header h1 {
+      font-family: 'Cinzel Decorative', cursive;
+      font-size: 3rem;
+      margin: 0;
+    }
 
-/* Article styling */
-article { 
-  margin-bottom:2rem; 
-  padding:1rem; 
-  border:4px solid #cc9900; 
-  border-radius:8px; 
-  background: rgba(255,248,220,0.95); 
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 3px 3px 12px rgba(0,0,0,0.4); 
-}
-article h2 { font-size:1.75rem; margin-bottom:0.5rem; color:#333; text-shadow:1px 1px #aaa; }
-article a { color:#b36b00; font-weight:bold; text-decoration:none; }
-article a:hover { text-shadow:0 0 6px #ffcc00; }
+    header p { margin-top: 0.3rem; font-size: 1.2rem; }
 
-/* Google Calendar iframe styling */
-iframe { border:0; width:100%; height:600px; margin-top:1rem; }
+    /*-----------------------
+      NAVIGATION BAR
+    ------------------------*/
+    nav {
+      background: #0D1F4C;
+      text-align: center;
+      padding: 0.5rem;
+    }
 
-/* Footer styling */
-footer { background:#111; color:#ffcc00; text-align:center; padding:1rem; margin-top:3rem; }
-footer a { color:#ffcc00; }
-footer a:hover { text-shadow:0 0 6px #ffcc00; }
-</style>
+    nav a {
+      color: #FFD700;
+      margin: 0 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    nav a:hover { color: #FFF; text-shadow: 0 0 6px #FFD700; }
+
+    /*-----------------------
+      DISCORD BAR
+    ------------------------*/
+    .discord-bar {
+      background: #111;
+      color: #FFD700;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .discord-bar a { color: #FFD700; font-weight: bold; text-decoration: none; }
+    .discord-bar a:hover { text-shadow: 0 0 6px #FFD700; }
+
+    /*-----------------------
+      MAIN CONTAINER
+    ------------------------*/
+    .container {
+      flex: 1;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /*-----------------------
+      ARTICLE STYLES
+    ------------------------*/
+    article {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: 2px solid #1E3A8A;
+      border-radius: 8px;
+      background: rgba(11, 26, 61, 0.85);
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 3px 3px 12px rgba(0,0,0,0.4);
+    }
+
+    article h2 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #FFD700; text-shadow: 1px 1px #111; }
+    article p, article a { font-size: 1rem; color: #F8F8F2; }
+    article a { font-weight: bold; text-decoration: underline; }
+    article a:hover { color: #FFD700; text-shadow: 0 0 6px #FFD700; }
+
+    iframe { border: 0; width: 100%; height: 600px; margin-top: 1rem; }
+
+    /*-----------------------
+      FOOTER
+    ------------------------*/
+    footer {
+      background: #000;
+      color: #FFD700;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    footer a { color: #FFD700; text-decoration: none; }
+    footer a:hover { text-shadow: 0 0 6px #FFD700; }
+  </style>
 </head>
 <body>
 
-<!-- Page Header -->
-<header>
-<h1>Akron Blackblades</h1>
-<p>Official Akron Premodern MTG Community</p>
-</header>
+  <!-- HEADER -->
+  <header>
+    <h1>Akron Blackblades</h1>
+    <p>Official Akron Premodern MTG Community</p>
+  </header>
 
-<!-- Discord community bar -->
-<div class="discord-bar">
-  <a href="https://discord.gg/bx2mxMZsXc" target="_blank" rel="noopener">Akron Blackblades Discord</a>
-</div>
+  <!-- DISCORD BAR -->
+  <div class="discord-bar">
+    <a href="https://discord.gg/bx2mxMZsXc" target="_blank">Join our Discord</a>
+  </div>
 
-<!-- Navigation bar using Bootstrap for mobile responsiveness -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class="container">
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-<ul class="navbar-nav">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-<li class="nav-item"><a class="nav-link" href="ohio-premodern.html">Ohio Premodern</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="ohio-premodern.html">Ohio Premodern</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<!-- Main container for event listings -->
-<div class="container my-4">
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <!-- Recurring Event -->
+    <article>
+      <h2>Recurring Event</h2>
+      <p>
+        Our next game night is on <span id="nextThursday"></span> at 6:30 PM at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> in Akron, Ohio.
+        Gold Border and Proxy friendly, $10 entry fee (store credit to top earners). Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank">Discord</a>.
+      </p>
+    </article>
 
-  <!-- Recurring Event -->
-  <article>
-    <h2>Recurring Event</h2>
-    <p>
-      Join us at <a href="https://www.fullgripgames.com" target="_blank" rel="noopener">Full Grip Games</a> every other Thursday starting 8/28/2025 at 6:30pm in Akron, Ohio. Gold Border and Proxy friendly, $10 entry fee, paid back in store credit to top earners. Join their <a href="https://discord.gg/ZqAdjYr8Cq" target="_blank" rel="noopener">Discord</a>.
-    </p>
-  </article>
-
-  <!-- Major Premodern Event -->
-  <article>
-    <h2>Major Premodern Event</h2>
-    <p>Our first major @MTG Premodern event at <a href="https://www.fullgripgames.com" target="_blank" rel="noopener">Full Grip Games</a> will be on October 4th at 1pm.</p>
-    <ul>
-      <li>$30 entry; store credit to top performers after Swiss rounds + top-cut playoff.</li>
-      <li>Gold Bordered prizes for top players:</li>
+    <!-- Major Premodern Event -->
+    <article>
+      <h2>Major Premodern Event</h2>
+      <p>Our first major @MTG Premodern event at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> will be on October 4th at 1pm.</p>
       <ul>
-        <li>1st Place: GB Gaea's Cradle</li>
-        <li>2nd Place: GB Mud Bundle (3 Grim Monolith, 4 Wasteland)</li>
-        <li>3rd/4th Place: GB Choice: 3 Force of Will or 1 Survival of the Fittest</li>
+        <li>$30 entry; store credit to top performers after Swiss rounds + top-cut playoff.</li>
+        <li>Gold Bordered prizes for top players:
+          <ul>
+            <li>1st Place: GB Gaea's Cradle</li>
+            <li>2nd Place: GB Mud Bundle (3 Grim Monolith, 4 Wasteland)</li>
+            <li>3rd/4th Place: GB Choice: 3 Force of Will or 1 Survival of the Fittest</li>
+          </ul>
+        </li>
       </ul>
-    </ul>
-  </article>
+    </article>
 
-  <!-- Google Calendar Embed -->
-  <article>
-    <h2>Event Calendar</h2>
-    <!-- Replace YOUR_CALENDAR_ID with your actual Google Calendar ID -->
-    <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York"></iframe>
-  </article>
+    <!-- Google Calendar Embed -->
+    <article>
+      <h2>Event Calendar</h2>
+      <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America%2FNew_York"></iframe>
+    </article>
+  </div>
 
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
+  </footer>
 
-<!-- Footer -->
-<footer>
-<p>Resources: <a href="https://premodernmagic.com" target="_blank" rel="noopener">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
-</footer>
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+    crossorigin="anonymous"></script>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript: Calculate next upcoming Thursday -->
+  <script>
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0=Sunday, 4=Thursday
+    const daysUntilThursday = (4 - dayOfWeek + 7) % 7 || 7; // Always get next Thursday
+    const nextThursday = new Date();
+    nextThursday.setDate(today.getDate() + daysUntilThursday);
+
+    const options = { month: 'long', day: 'numeric', year: 'numeric' };
+    document.getElementById('nextThursday').textContent = nextThursday.toLocaleDateString('en-US', options);
+  </script>
 </body>
 </html>
+
 
