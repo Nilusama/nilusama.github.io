@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akron Blackblades</title>
 
-  <!-- Google Fonts for retro-style headers -->
+  <!-- Google Fonts for retro headers -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
@@ -13,23 +13,17 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
   <style>
-    /*-----------------------
-      GLOBAL BODY SETTINGS
-    ------------------------*/
     html, body {
-      height: 100%; /* Ensures flex container fills viewport */
+      height: 100%;
       margin: 0;
-      padding: 0;
       font-family: Georgia, serif;
-      background-color: #0B1A3D; /* Dark navy background */
-      color: #F8F8F2; /* Off-white body text */
+      background-color: #0B1A3D; /* Dark navy */
+      color: #F8F8F2;
       display: flex;
       flex-direction: column;
     }
 
-    /*-----------------------
-      HEADER STYLES
-    ------------------------*/
+    /* HEADER */
     header {
       background: #000;
       color: #FFD700;
@@ -39,123 +33,41 @@
       text-shadow: 1px 1px #111;
     }
 
-    header h1 {
-      font-family: 'Cinzel Decorative', cursive;
-      font-size: 3rem;
-      margin: 0;
-    }
+    header h1 { font-family:'Cinzel Decorative', cursive; font-size:3rem; margin:0; }
+    header p { margin-top:0.3rem; font-size:1.2rem; }
 
-    header p {
-      margin-top: 0.3rem;
-      font-size: 1.2rem;
-    }
+    /* NAVIGATION */
+    nav { background: #0D1F4C; text-align: center; padding: 0.5rem; }
+    nav a { color:#FFD700; margin:0 1rem; font-weight:bold; text-decoration:none; transition:0.2s; }
+    nav a:hover { color:#FFF; text-shadow:0 0 6px #FFD700; }
 
-    /*-----------------------
-      NAVIGATION BAR
-    ------------------------*/
-    nav {
-      background: #0D1F4C;
-      text-align: center;
-      padding: 0.5rem;
-    }
+    /* DISCORD BAR */
+    .discord-bar { background: #111; color: #FFD700; text-align:center; padding:0.5rem; font-size:0.9rem; }
+    .discord-bar a { color:#FFD700; font-weight:bold; text-decoration:none; }
+    .discord-bar a:hover { text-shadow:0 0 6px #FFD700; }
 
-    nav a {
-      color: #FFD700;
-      margin: 0 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.2s;
-    }
+    /* MAIN CONTAINER */
+    .container { flex: 1; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
-    nav a:hover {
-      color: #FFF;
-      text-shadow: 0 0 6px #FFD700;
-    }
-
-    /*-----------------------
-      DISCORD BAR
-    ------------------------*/
-    .discord-bar {
-      background: #111;
-      color: #FFD700;
-      text-align: center;
-      padding: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .discord-bar a {
-      color: #FFD700;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .discord-bar a:hover {
-      text-shadow: 0 0 6px #FFD700;
-    }
-
-    /*-----------------------
-      MAIN CONTAINER
-    ------------------------*/
-    .container {
-      flex: 1; /* Grow to fill space so footer is pushed down */
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    /*-----------------------
-      ARTICLE STYLES
-    ------------------------*/
+    /* ARTICLE STYLES */
     article {
       margin-bottom: 2rem;
       padding: 1rem;
-      border: 2px solid #1E3A8A; /* Accent blue border */
+      border: 2px solid #1E3A8A;
       border-radius: 8px;
-      background: rgba(11, 26, 61, 0.85); /* Semi-transparent dark blue */
+      background: rgba(11,26,61,0.85);
       box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 3px 3px 12px rgba(0,0,0,0.4);
     }
 
-    article h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-      color: #FFD700;
-      text-shadow: 1px 1px #111;
-    }
+    article h2 { font-size: 1.75rem; margin-bottom: 0.5rem; color: #FFD700; text-shadow: 1px 1px #111; }
+    article p, article a { font-size: 1rem; color: #F8F8F2; }
+    article a { font-weight: bold; text-decoration: underline; }
+    article a:hover { color: #FFD700; text-shadow: 0 0 6px #FFD700; }
 
-    article p, article a {
-      font-size: 1rem;
-      color: #F8F8F2;
-    }
-
-    article a {
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    article a:hover {
-      color: #FFD700;
-      text-shadow: 0 0 6px #FFD700;
-    }
-
-    /*-----------------------
-      FOOTER
-    ------------------------*/
-    footer {
-      background: #000;
-      color: #FFD700;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto; /* Push footer to bottom */
-    }
-
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-shadow: 0 0 6px #FFD700;
-    }
+    /* FOOTER */
+    footer { background: #000; color: #FFD700; text-align:center; padding:1rem; margin-top:auto; }
+    footer a { color: #FFD700; text-decoration:none; }
+    footer a:hover { text-shadow:0 0 6px #FFD700; }
   </style>
 </head>
 <body>
@@ -183,9 +95,7 @@
   <div class="container">
     <article>
       <h2>Welcome</h2>
-      <p>
-        Welcome to the official Akron Blackblades website! Discover events, community news, and nostalgia for Premodern MTG in Akron, Ohio. Join us to celebrate classic Magic gameplay and retro vibes from the late 90s and early 2000s.
-      </p>
+      <p>Welcome to the official Akron Blackblades website. Here you'll find updates, events, and community info for Premodern MTG players in Akron, Ohio. Join us to celebrate classic Magic gameplay and nostalgia from the late 90s and early 2000s.</p>
     </article>
   </div>
 
@@ -194,10 +104,10 @@
     <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
   </footer>
 
-  <!-- BOOTSTRAP JS BUNDLE -->
+  <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
     crossorigin="anonymous"></script>
-
 </body>
 </html>
+
