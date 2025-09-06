@@ -1,195 +1,151 @@
-/* ==================================================
-   Akron Blackblades - Global Stylesheet
-   Applies uniform styles across all HTML pages
-================================================== */
-
-/* -----------------------
-   BODY & PAGE LAYOUT
------------------------ */
+/* -------------------------
+   Global Styles
+------------------------- */
 body {
-    font-family: Georgia, serif; /* Main body font */
+    font-family: Georgia, serif;
     background-color: #e0e0e0;
     color: #222;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    margin:0;
 }
 
-/* -----------------------
-   HEADER STYLING
------------------------ */
+/* -------------------------
+   Header
+------------------------- */
 header {
-    background: linear-gradient(135deg, #0b1c34, #10253f);
-    color: #996600;
-    text-align: center;
-    border-bottom: 4px solid #111;
-    text-shadow: 2px 2px #000;
-    padding: 1.5rem 1rem;
+    background: linear-gradient(135deg,#0b1c34,#10253f);
+    color:#996600; /* Gold title */
+    text-align:center;
+    border-bottom:4px solid #111;
+    text-shadow:2px 2px #000;
+    padding:1.5rem 1rem;
     position: sticky;
-    top: 0;
-    z-index: 1030;
+    top:0;
+    z-index:1030;
 }
-
-/* Header fonts for all headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel Decorative', cursive;
-    color: #0b1c34;
-    text-shadow: 1px 1px #aaa;
-    margin: 0.5rem 0;
+header h1 {
+    margin:0;
+    font-family:'Cinzel Decorative', cursive;
+    font-size:2.2rem;
+    letter-spacing:2px;
+    color:#996600; /* Gold title */
 }
-
-/* h1 specific sizing */
-h1 {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-}
-
-/* Header paragraph under h1 */
 header p {
-    margin-top: 0.3rem;
-    font-size: 1rem;
+    margin-top:0.3rem;
+    font-size:1rem;
+    color:#996600;
 }
 
-/* Responsive adjustments */
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.6rem; /* Avoid overflow */
-    }
-    header p {
-        font-size: 0.9rem;
-    }
+/* -------------------------
+   Banner Image (index.html only)
+------------------------- */
+.banner-image { 
+    width:100%; 
+    border-radius:8px; 
+    transition: transform 10s ease; 
+}
+.banner-image:hover { 
+    transform: scale(1.05); 
 }
 
-/* -----------------------
-   NAVBAR STYLING
------------------------ */
+/* -------------------------
+   Navbar
+------------------------- */
 .navbar-custom {
-    background: #0b1c34;
+    background:#0b1c34;
 }
-
 .navbar-custom .nav-link {
-    color: #996600;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    color:#996600;
+    font-weight:bold;
+    transition:all 0.3s ease;
 }
-
-/* Hover effect */
 .navbar-custom .nav-link:hover {
-    color: #fff;
-    text-shadow: 0 0 6px #996600;
+    color:#fff;
+    text-shadow:0 0 6px #996600;
 }
-
-/* Active page (highlight current) */
 .navbar-custom .nav-link.active {
-    background-color: #080f1a; /* darker shade for current page */
-    border-radius: 4px;
-    pointer-events: none; /* dissuade clicks */
+    color:#cc9900; /* Slightly darker gold for current page */
+    pointer-events:none;
 }
 
-/* -----------------------
-   DISCORD BAR
------------------------ */
+/* -------------------------
+   Discord Bar
+------------------------- */
 .discord-bar {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:0.5rem;
+    font-size:0.9rem;
 }
-
 .discord-bar a {
-    color: #996600;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: bold;
+    color:#996600;
+    margin:0 1rem;
+    text-decoration:none;
+    font-weight:bold;
 }
-
 .discord-bar a:hover {
-    text-shadow: 0 0 6px #996600;
+    text-shadow:0 0 6px #996600;
 }
 
-/* -----------------------
-   MAIN CONTAINER & ARTICLES
------------------------ */
+/* -------------------------
+   Main container & articles
+------------------------- */
 .container-main {
-    flex: 1 0 auto;
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    text-align: center; /* default center text */
+    flex:1 0 auto;
+    max-width:900px;
+    margin:2rem auto;
+    padding:0 1rem;
 }
-
-/* Article boxes */
 article {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: 2px solid #996600;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-    text-align: center;
+    margin-bottom:2rem;
+    padding:1rem;
+    border:2px solid #996600;
+    border-radius:8px;
+    background:#fff;
+    box-shadow:2px 2px 8px rgba(0,0,0,0.2);
 }
-
 article h2 {
-    font-size: 1.75rem;
-    color: #0b1c34;
-    text-shadow: 1px 1px #aaa;
+    font-size:1.75rem;
+    color:#0b1c34;
+    text-shadow:1px 1px #aaa;
+    font-family:'Cinzel Decorative', cursive;
 }
-
-/* Links inside articles */
+article p, article li {
+    font-size:1rem;
+}
 article a {
-    color: #103366;
-    font-weight: bold;
-    text-decoration: none;
+    color:#103366;
+    font-weight:bold;
+    text-decoration:none;
 }
-
 article a:hover {
-    text-shadow: 0 0 6px #996600;
+    text-shadow:0 0 6px #996600;
 }
-
-/* Left-align bullet lists while keeping rest centered */
 article ul {
-    text-align: left;
-    display: inline-block; /* allow centering of list block */
-    margin-left: 0;
-    padding-left: 1.5rem;
+    text-align:left; /* Left align bullets */
 }
 
-/* -----------------------
-   MAP CONTAINER (Contact Page)
------------------------ */
-.map-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 1rem auto;
-    border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
-}
-
-/* -----------------------
-   FOOTER STYLING
------------------------ */
+/* -------------------------
+   Footer
+------------------------- */
 footer {
-    flex-shrink: 0;
-    background: #111;
-    color: #996600;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    flex-shrink:0;
+    background:#111;
+    color:#996600;
+    text-align:center;
+    padding:1rem;
+    margin-top:2rem;
 }
+footer a { color:#996600; }
+footer a:hover { text-shadow:0 0 6px #996600; }
 
-footer a {
-    color: #996600;
-}
-
-footer a:hover {
-    text-shadow: 0 0 6px #996600;
+/* -------------------------
+   Responsive
+------------------------- */
+@media (max-width:576px){
+    header h1 { font-size:1.6rem; }
+    header p { font-size:0.9rem; }
 }
