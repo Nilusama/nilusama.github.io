@@ -53,21 +53,23 @@ header p {
 /* -------------------------
    Navbar
 ------------------------- */
-.navbar-custom {
-    background:#0b1c34;
-}
+/* Navbar links */
 .navbar-custom .nav-link {
-    color:#996600;
-    font-weight:bold;
-    transition:all 0.3s ease;
+  color: #996600; /* normal link color */
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
+
+/* Navbar link hover */
 .navbar-custom .nav-link:hover {
-    color:#fff;
-    text-shadow:0 0 6px #996600;
+  color: #fff;
+  text-shadow: 0 0 6px #996600;
 }
+
+/* Active page link */
 .navbar-custom .nav-link.active {
-    color:#cc9900; /* Slightly darker gold for current page */
-    pointer-events:none;
+  color: #cc9900; /* slightly darker gold for active page */
+  pointer-events: none; /* prevent clicking on current page */
 }
 
 /* -------------------------
