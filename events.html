@@ -31,6 +31,7 @@ footer { flex-shrink:0; background:#111; color:#996600; text-align:center; paddi
 footer a { color:#996600; }
 footer a:hover { text-shadow:0 0 6px #996600; }
 
+/* Mobile adjustments */
 @media (max-width: 576px) {
   header h1 { font-size:1.6rem; }
   header p { font-size:0.9rem; }
@@ -81,7 +82,7 @@ footer a:hover { text-shadow:0 0 6px #996600; }
     <li>2nd Place: GB Mud Bundle (3 Grim Monolith, 4 Wasteland)</li>
     <li>3rd/4th Place: GB Choice: 3 Force of Will or 1 Survival of the Fittest</li>
   </ul>
-  <li>Events follow the <a href="https://premodernmagic.com/banned-watched#ban-list" target="_blank">official PreModern banlist</a>.</li>
+  <li>Events follow the <a href="https://premodernmagic.com/banned-watched#ban-list" target="_blank">official Premodern banlist</a>.</li>
 </ul>
 </article>
 
@@ -96,12 +97,18 @@ footer a:hover { text-shadow:0 0 6px #996600; }
 </footer>
 
 <script>
-// Next Thursday every 2 weeks, DST-safe
-const startDate = new Date("2025-09-11T18:30:00-04:00");
-const now = new Date();
-let nextEvent = new Date(startDate);
-while (nextEvent < now) nextEvent.setDate(nextEvent.getDate() + 14);
-document.getElementById("nextEventDate").textContent = nextEvent.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'numeric', day:'numeric'}) + " (occurs every 2 weeks)";
+// DST-aware recurring event calculation
+function getNextEventDate(startISO) {
+  const start = new Date(startISO);
+  const now = new Date();
+  let next = new Date(start);
+  while (next < now) {
+    next.setUTCDate(next.getUTCDate() + 14);
+  }
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour:'2-digit', minute:'2-digit' };
+  return next.toLocaleString('en-US', options);
+}
+document.getElementById("nextEventDate").textContent = getNextEventDate("2025-09-11T18:30:00-04:00") + " (occurs every 2 weeks)";
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
