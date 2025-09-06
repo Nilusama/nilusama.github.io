@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akron Blackblades</title>
-<meta name="description" content="Official Akron Blackblades Premodern MTG community in Akron, Ohio.">
+<meta name="description" content="Akron Blackblades Premodern MTG Community in Akron/Cleveland, Ohio.">
 <meta name="keywords" content="Akron, Cleveland, Premodern Magic, MTG, Community">
 
 <!-- Bootstrap CSS -->
@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
 
 <style>
+/* General body & layout */
 body {
   font-family: Georgia, serif;
   background-color: #e0e0e0;
@@ -23,97 +24,163 @@ body {
   min-height: 100vh;
   margin: 0;
 }
-.container-main { flex: 1 0 auto; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
+
+/* Main content container */
+.container-main { 
+  flex: 1 0 auto; 
+  max-width: 900px; 
+  margin: 2rem auto; 
+  padding: 0 1rem; 
+}
+
+/* Header & Banner */
 header {
   background: linear-gradient(135deg, #0b1c34, #10253f);
-  color: #b38f00;
+  color: #996600; /* darker yellow */
   padding: 2rem;
   text-align: center;
   border-bottom: 4px solid #111;
   text-shadow: 2px 2px #000;
 }
-header h1 { margin:0; font-family:'Cinzel Decorative', cursive; font-size:3rem; letter-spacing:2px; }
-header p { margin-top:0.3rem; font-size:1.2rem; }
 
-.banner-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  transition: transform 10s ease-in-out;
+header h1 { 
+  margin:0; 
+  font-family:'Cinzel Decorative', cursive; 
+  font-size:3rem; 
+  letter-spacing:2px; 
 }
-.banner-img:hover {
+header p { 
+  margin-top:0.3rem; 
+  font-size: 1.2rem;
+}
+
+/* Dakkon Blackblade banner */
+.banner-container {
+  overflow: hidden;
+  max-height: 400px;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+.banner-img {
+  width: 100%;
+  height: auto;
+  transition: transform 20s ease;
+}
+.banner-container:hover .banner-img {
   transform: scale(1.05);
 }
 
-nav { background: #0b1c34; padding: 0.5rem; text-align: center; }
-nav a {
-  color: #b38f00;
-  margin: 0 1rem;
-  text-decoration: none;
+/* Navbar */
+.navbar-custom {
+  background: #0b1c34;
+}
+.navbar-custom .navbar-brand, .navbar-custom .nav-link {
+  color: #996600;
   font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
   transition: all 0.3s ease;
 }
-nav a:hover { color:#fff; text-shadow:0 0 6px #b38f00; background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5)); }
+.navbar-custom .nav-link:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #996600;
+}
 
-.discord-bar { background: #111; color: #fff; text-align: center; padding: 0.5rem; font-size:0.9rem; }
-.discord-bar a { color:#b38f00; margin:0 1rem; text-decoration:none; font-weight:bold; }
-.discord-bar a:hover { text-shadow:0 0 6px #b38f00; }
+/* Discord bar */
+.discord-bar { 
+  background: #111; 
+  color: #fff; 
+  text-align: center; 
+  padding: 0.5rem; 
+  font-size: 0.9rem; 
+}
+.discord-bar a { 
+  color:#996600; 
+  margin:0 1rem; 
+  text-decoration:none; 
+  font-weight:bold; 
+}
+.discord-bar a:hover { 
+  text-shadow:0 0 6px #996600; 
+}
 
-article { margin-bottom:2rem; padding:1rem; border:2px solid #b38f00; border-radius:8px; background:#ffffff; box-shadow:2px 2px 8px rgba(0,0,0,0.2); }
-article h2 { font-size:1.75rem; color:#0b1c34; text-shadow:1px 1px #aaa; }
-article p, article li { font-size:1rem; }
-article a { color:#103366; font-weight:bold; text-decoration:none; }
-article a:hover { text-shadow:0 0 6px #b38f00; }
+/* Footer */
+footer { 
+  flex-shrink:0; 
+  background:#111; 
+  color:#996600; 
+  text-align:center; 
+  padding:1rem; 
+  margin-top:2rem; 
+}
+footer a { color:#996600; }
+footer a:hover { text-shadow:0 0 6px #996600; }
 
-footer { flex-shrink:0; background:#111; color:#b38f00; text-align:center; padding:1rem; margin-top:2rem; }
-footer a { color:#b38f00; }
-footer a:hover { text-shadow:0 0 6px #b38f00; }
+/* Buttons/links */
+a.btn-custom {
+  background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  border-radius: 5px;
+  color: #996600;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a.btn-custom:hover {
+  color: #fff;
+  background: linear-gradient(45deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  text-shadow: 0 0 6px #996600;
+}
 </style>
 </head>
+
 <body>
 
+<!-- Header with Banner -->
 <header>
-<h1>Akron Blackblades</h1>
-<p>Official Akron Premodern MTG Community</p>
+  <div class="banner-container">
+    <img src="images/dakkon-blackblade.jpg" alt="Dakkon Blackblade" class="banner-img">
+  </div>
+  <h1>Akron Blackblades</h1>
+  <p>Official Akron Premodern MTG Community</p>
 </header>
 
-<!-- Banner Image of Dakkon Blackblade -->
-<img src="images/dakkon_blackblade.jpg" alt="Dakkon Blackblade Banner" class="banner-img">
-
+<!-- Discord bar -->
 <div class="discord-bar">
-<a href="https://discord.gg/bx2mxMZsXc" target="_blank">Akron Blackblades Discord</a>
+  <a href="https://discord.gg/bx2mxMZsXc" target="_blank">Akron Blackblades Discord</a>
 </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="events.html">Events</a>
-<a href="ohio-premodern.html">Ohio Premodern</a>
-<a href="contact.html">Contact</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Akron Blackblades</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="color:#996600;">☰</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="ohio-premodern.html">Ohio Premodern</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
+<!-- Main container -->
 <div class="container-main">
-<article>
-<h2>Welcome</h2>
-<p>
-Welcome to the official Akron Blackblades website. Here you'll find updates, events, and community info for Premodern MTG players in Akron, Ohio. Join us to celebrate classic Magic gameplay from the late 90s and early 2000s.
-</p>
-<p>Our events are <strong>proxy-friendly</strong> (cards must be legible), <strong>gold-border friendly</strong>, and <strong>reprint-friendly</strong>. Details and full schedule are on our <a href="events.html">Events page</a>.</p>
-</article>
+  <article>
+    <h2>Welcome</h2>
+    <p>Welcome to the official Akron Blackblades website. Here you'll find updates, events, and community info for Premodern MTG players in Akron, Ohio. Join us to celebrate classic Magic gameplay and nostalgia from the late 90s and early 2000s.</p>
+  </article>
 </div>
 
+<!-- Footer -->
 <footer>
-<p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
+  <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
-
-
-
