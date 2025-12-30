@@ -9,13 +9,13 @@ body {
 }
 
 .discord-bar {
-    background:#111;
-    color:#fff;
-    text-align:center;
-    padding:0.5rem 0;
-    font-size:0.9rem;
+    background: #7785cc;  /* light blue */
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 1040;
     border-bottom: 2px solid #996600;
 }
