@@ -12,7 +12,7 @@ body {
 }
 
 /* -------------------------
-   Discord Bar Banner-Style
+   Discord Bar
 ------------------------- */
 .discord-bar {
     position: fixed;       /* fixed at top */
@@ -36,6 +36,7 @@ body {
     text-decoration: none;
     margin: 0 1rem;
 }
+
 .discord-bar a:hover {
     text-shadow: 0 0 6px #ffcc00;  /* gold glow on hover */
 }
@@ -51,8 +52,10 @@ header {
     text-align: center;
     border-bottom: 4px solid #111;
     text-shadow: 2px 2px #000;
-    padding: 2rem 1rem 1.5rem 1rem; /* top padding increased for Discord bar */
+    /* Increased top padding to clear fixed Discord bar */
+    padding: 3rem 1rem 1.5rem 1rem;
 }
+
 header h1 {
     margin: 0;
     font-family: 'Cinzel Decorative', cursive;
@@ -60,6 +63,7 @@ header h1 {
     letter-spacing: 2px;
     color: #996600;
 }
+
 header p {
     margin-top: 0.3rem;
     font-size: 1rem;
@@ -69,24 +73,27 @@ header p {
 /* -------------------------
    Navbar
 ------------------------- */
-.navbar-custom .nav-link {
-  color: #996600; /* normal link color */
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-.navbar-custom .nav-link:hover {
-  color: #fff;
-  text-shadow: 0 0 6px #996600;
-}
-.navbar-custom .nav-link.active {
-  color: #cc9900; /* active page */
-  pointer-events: none;
-}
-
-/* Navbar background (matches homepage header gradient) */
 .navbar-custom {
     background: linear-gradient(135deg,#0b1c34,#10253f);
     border-bottom: 2px solid #111;
+    padding: 0.5rem 1rem; /* compact height */
+    z-index: 1040;         /* below Discord bar but above header */
+}
+
+.navbar-custom .nav-link {
+    color: #996600; /* gold */
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 6px #996600;
+}
+
+.navbar-custom .nav-link.active {
+    color: #cc9900; /* active page gold */
+    pointer-events: none;
 }
 
 /* -------------------------
@@ -100,6 +107,7 @@ header p {
     transition: transform 10s ease; 
     z-index: 1;
 }
+
 .banner-image:hover { 
     transform: scale(1.05); 
 }
@@ -113,6 +121,7 @@ header p {
     margin: 2.5rem auto 0 auto; /* top margin to clear header + Discord bar */
     padding: 0 1rem;
 }
+
 article {
     margin-bottom: 2rem;
     padding: 1rem;
@@ -121,23 +130,28 @@ article {
     background: #fff;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
+
 article h2 {
     font-size: 1.75rem;
     color: #0b1c34;
     text-shadow: 1px 1px #aaa;
     font-family: 'Cinzel Decorative', cursive;
 }
+
 article p, article li {
     font-size: 1rem;
 }
+
 article a {
     color: #103366;
     font-weight: bold;
     text-decoration: none;
 }
+
 article a:hover {
     text-shadow: 0 0 6px #996600;
 }
+
 article ul {
     text-align: left;
 }
@@ -153,6 +167,7 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
 footer a { color: #996600; }
 footer a:hover { text-shadow: 0 0 6px #996600; }
 
@@ -163,7 +178,7 @@ footer a:hover { text-shadow: 0 0 6px #996600; }
     header h1 { font-size: 1.6rem; }
     header p { font-size: 0.9rem; }
     header {
-        padding-top: 4rem;
+        padding-top: 2.8rem; /* reduce slightly for mobile */
     }
 }
 
@@ -174,10 +189,12 @@ footer a:hover { text-shadow: 0 0 6px #996600; }
   position: relative;
   z-index: 1050;
 }
+
 .navbar-toggler {
   pointer-events: auto;
   border-color: #996600;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(153, 102, 0, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
