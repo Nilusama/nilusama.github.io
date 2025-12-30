@@ -157,7 +157,6 @@ footer a:hover {
     .navbar-custom { padding: 0.25rem 0.5rem; }
 }
 
-.kerning-fix {
-  display: inline-block;
-  letter-spacing: 0.25em; /* fix kerning */
+.fancy-title {
+  font-kerning: none;
 }
