@@ -159,5 +159,5 @@ footer a:hover {
 
 .kerning-fix {
   display: inline-block;
-  letter-spacing: 0.05em; /* fix kerning */
+  letter-spacing: 0.2em; /* fix kerning */
 }
