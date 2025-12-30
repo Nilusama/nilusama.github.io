@@ -156,3 +156,8 @@ footer a:hover {
     header p { font-size:0.9rem; }
     .navbar-custom { padding: 0.25rem 0.5rem; }
 }
+
+.kerning-fix {
+  display: inline-block;
+  letter-spacing: 0.05em; /* fix kerning */
+}
