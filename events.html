@@ -85,7 +85,10 @@
   <p>Resources: <a href="https://premodernmagic.com" target="_blank">Premodern Magic</a> | &copy; 2025 Akron Blackblades</p>
 </footer>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JS for biweekly event = depreciated -->
+<!-- how to format:
+  Join weekly at <a href="https://www.fullgripgames.com" target="_blank">Full Grip Games</a> every Thursday starting <span id="nextEventDate"></span> at 6:30 PM in Akron, Ohio.
+  //
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Calculate next recurring event date
@@ -96,5 +99,6 @@
   const options = { weekday:'long', year:'numeric', month:'numeric', day:'numeric', hour:'numeric', minute:'numeric', hour12:true };
   document.getElementById("nextEventDate").textContent = nextEvent.toLocaleString('en-US', options) + " (occurs weekly)";
 </script>
+  -->
 </body>
 </html>
