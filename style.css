@@ -52,7 +52,7 @@ header h1 {
 
 header h2 {
     margin:0.2rem 0 0.4rem 0;
-    font-size:1.5rem;
+    font-size:1.3rem;
     font-weight:600;
     color:#996600;
     transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
